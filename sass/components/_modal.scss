@@ -25,178 +25,179 @@
   align-items: center;
   padding-top: 40px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-close {
-  position: absolute;
-  top: 8px;
-  left: 490px;
-  display: flex;
-  justify-content: center;
-  outline: none;
-  &:hover > .close-icon {
-    fill: $active-color;
-  }
-  &:focus > .close-icon {
-    fill: $active-color;
-  }
-}
-
-.close-icon {
-  width: 18px;
-  height: 18px;
-  fill: #000000;
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  z-index: 2;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.close-ellipse {
-  width: 30px;
-  height: 30px;
-  fill: #fff;
-  stroke-width: 1px;
-  stroke: rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.modal-title {
-  color: $title-color;
-  text-align: center;
-  font-size: 20px;
-  line-height: normal;
-  letter-spacing: 0.6px;
-  margin-bottom: 12px;
-}
-
-.modal-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.modal-label {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  &:hover > .modal-icon {
-    fill: $active-color;
-  }
-  &:hover > .modal-input {
-    border: 1px solid $active-color;
-  }
-}
-
-.label-sp {
-  color: $text-color;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 0.12px;
-  margin-bottom: 4px;
-}
-
-.modal-input {
-  width: 406px;
-  height: 40px;
-  border-radius: 4px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  padding-left: 42px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:focus ~ .modal-icon {
-    fill: $active-color;
-  }
-  &:focus {
-    border: 1px solid $active-color;
-  }
-}
-
-.modal-icon {
-  width: 18px;
-  height: 18px;
-  fill: $title-color;
-  position: absolute;
-  top: 30px;
-  left: 12px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-area {
-  width: 432px;
-  color: rgba(117, 117, 117, 0.5);
-  font-size: 12px;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 0.12px;
-  border-radius: 4px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  padding: 16px 12px;
-  padding-bottom: 96px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    border: 1px solid $active-color;
+  &__close {
+    position: absolute;
+    top: 8px;
+    left: 490px;
+    display: flex;
+    justify-content: center;
+    outline: none;
+    &:hover > .modal__cross {
+      fill: $active-color;
+    }
+    &:focus > .modal__cross {
+      fill: $active-color;
+    }
   }
   
-  &:focus-visible {
-    border: 1px solid $active-color;
+  &__cross {
+    width: 18px;
+    height: 18px;
+    fill: #000000;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    z-index: 2;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  &__ellipse {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+    stroke-width: 1px;
+    stroke: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  &__title {
+    color: $title-color;
+    text-align: center;
+    font-size: 20px;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    margin-bottom: 12px;
+  }
+  
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  &__label {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &:hover > .modal__icon {
+      fill: $active-color;
+    }
+    &:hover > .modal__input {
+      border: 1px solid $active-color;
+    }
+  }
+  
+  &__sp {
+    color: $text-color;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.12px;
+    margin-bottom: 4px;
+  }
+  
+  &__input {
+    width: 406px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    padding-left: 42px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus ~ &__icon {
+      fill: $active-color;
+    }
+    &:focus {
+      border: 1px solid $active-color;
+    }
+  }
+  
+  &__icon {
+    width: 18px;
+    height: 18px;
+    fill: $title-color;
+    position: absolute;
+    top: 30px;
+    left: 12px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  &__area {
+    width: 432px;
+    color: rgba(117, 117, 117, 0.5);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.12px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    padding: 16px 12px;
+    padding-bottom: 96px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      border: 1px solid $active-color;
+    }
+    
+    &:focus-visible {
+      border: 1px solid $active-color;
+    }
+  }
+  
+  
+  
+  &__conditions {
+    margin-top: 10px;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+  }
+  
+  &__check {
+    width: 16px;
+    height: 15px;
+    fill: $title-color;
+  }
+  
+  &__mailing {
+    color: $text-color;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 0.42px;
+  }
+  
+  &__link {
+    color: $active-color;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.42px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+  }
+  
+  &__sub {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px; /* 187.5% */
+    letter-spacing: 0.96px;
+    border-radius: 4px;
+    background: $active-color;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    width: 200px;
+    height: 50px;
+    border: 0;
+    margin-top: 20px;
   }
 }
 
 
-
-.modal-conditions {
-  margin-top: 10px;
-  display: flex;
-  gap: 7px;
-  align-items: center;
-}
-
-.modal-check {
-  width: 16px;
-  height: 15px;
-  fill: $title-color;
-}
-
-.modal-sp {
-  color: $text-color;
-  font-weight: 400;
-  line-height: 24px; /* 171.429% */
-  letter-spacing: 0.42px;
-}
-
-.modal-link {
-  color: $active-color;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.42px;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-skip-ink: none;
-  text-decoration-thickness: auto;
-  text-underline-offset: auto;
-  text-underline-position: from-font;
-}
-
-.modal-sub {
-  color: #fff;
-  text-align: center;
-  font-size: 16px;
-  line-height: 30px; /* 187.5% */
-  letter-spacing: 0.96px;
-  border-radius: 4px;
-  background: $active-color;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  width: 200px;
-  height: 50px;
-  border: 0;
-  margin-top: 20px;
-}
 
 .is-hidden {
   pointer-events: none;
