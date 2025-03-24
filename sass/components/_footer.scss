@@ -4,11 +4,11 @@
   padding-bottom: 60px;
 }
 
-.footer-box {
+.footer__box {
   display: flex;
 }
 
-.footer-logo {
+.footer__logo {
   color: $active-color;
   font-family: $logo-font;
   font-size: 26px;
@@ -16,7 +16,7 @@
   text-decoration: none;
 }
 
-.footer-studio {
+.footer__studio {
   color: #fff;
 }
 

@@ -8,7 +8,7 @@
     url(../images/backhero.jpg);
 }
 
-.hero-box {
+.hero__box {
   display: flex;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -18,7 +18,7 @@
   justify-content: center;
 }
 
-.hero-title {
+.hero__box__title {
   color: #fff;
   text-align: center;
   font-size: 44px;
@@ -29,7 +29,7 @@
   max-width: 696px;
 }
 
-.hero-bt {
+.hero__box__bt {
   position: relative;
   color: #fff;
   text-align: center;
@@ -63,12 +63,12 @@
   padding-bottom: 94px;
 }
 
-.advantages-points {
+.advantages__points {
   display: flex;
   gap: 30px;
 }
 
-.advantages-point {
+.advantages__point {
   flex-basis: calc((100% - 90px) / 4);
   &:first-child:before {
     content: "";
@@ -115,7 +115,7 @@
   }
 }
 
-.advantages-title {
+.advantages__title {
   color: $title-color;
   letter-spacing: 0.42px;
   text-transform: uppercase;
@@ -123,7 +123,7 @@
   font-size: 14px;
 }
 
-.advantages-text {
+.advantages__text {
   color: $text-color;
   font-weight: 400;
   line-height: 24px; /* 171.429% */
@@ -134,7 +134,7 @@
   padding-bottom: 94px;
 }
 
-.activity-title {
+.activity__title {
   color: $title-color;
   text-align: center;
   font-size: 36px;
@@ -142,12 +142,12 @@
   margin-bottom: 50px;
 }
 
-.activity-points {
+.activity__points {
   display: flex;
   gap: 30px;
 }
 
-.activity-point {
+.activity__point {
   flex-basis: calc((100% - 60px) / 3);
   position: relative;
   &:nth-child(1) > .activity-text {
@@ -163,7 +163,7 @@
   }
 }
 
-.activity-text {
+.activity__text {
   position: absolute;
   color: #fff;
   text-align: center;
@@ -179,7 +179,7 @@
   background-color: #f5f4fa;
 }
 
-.team-title {
+.team__title {
   color: $title-color;
   text-align: center;
   font-size: 36px;
@@ -187,12 +187,12 @@
   margin-bottom: 50px;
 }
 
-.team-points {
+.team__points {
   display: flex;
   gap: 30px;
 }
 
-.team-point {
+.team__point {
   max-width: 270px;
   max-height: 428px;
   border-radius: 0px 0px 4px 4px;
@@ -203,12 +203,12 @@
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
-.team-img {
+.team__img {
   max-width: 270px;
   max-height: 260px;
 }
 
-.team-name {
+.team__name {
   color: $title-color;
   text-align: center;
   font-size: 16px;
@@ -218,7 +218,7 @@
   margin-bottom: 10px;
 }
 
-.team-text {
+.team__text {
   color: $text-color;
   text-align: center;
   font-size: 16px;
@@ -226,7 +226,7 @@
   letter-spacing: 0.48px;
 }
 
-.team-link {
+.team__link {
   background-color: transparent;
   width: 44px;
   height: 44px;
@@ -244,20 +244,21 @@
   &:focus .social-icon {
     fill: #ffffff;
   }
+  &__icon {
+    fill: #afb1b8;
+    width: 20px;
+    height: 20px;
+  }
 }
 
-.team-icons {
+.team__icons {
   display: flex;
   gap: 10px;
   justify-content: center;
   margin-top: 16px;
 }
 
-.social-icon {
-  fill: #afb1b8;
-  width: 20px;
-  height: 20px;
-}
+
 
 .client {
   padding: 94px 0;
