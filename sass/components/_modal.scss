@@ -182,14 +182,7 @@
   }
   
   &__sub {
-    color: #fff;
-    text-align: center;
-    font-size: 16px;
-    line-height: 30px; /* 187.5% */
-    letter-spacing: 0.96px;
-    border-radius: 4px;
-    background: $active-color;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    @extend %button;
     width: 200px;
     height: 50px;
     border: 0;
