@@ -27,26 +27,6 @@ input {
   border: 0;
 }
 
-@keyframes scale {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@keyframes ring {
-  0% {
-    width: 20px;
-    height: 20px;
-    opacity: 1;
-  }
-  100% {
-    width: 250px;
-    height: 250px;
-    opacity: 0;
-  }
-}
 .client__title, .team__title, .activity__title {
   color: #212121;
   text-align: center;
@@ -71,6 +51,26 @@ input {
   width: 370px;
 }
 
+@keyframes scale {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes ring {
+  0% {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+  }
+  100% {
+    width: 250px;
+    height: 250px;
+    opacity: 0;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -87,11 +87,14 @@ body {
 
 .footer {
   background-color: #2f303a;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
 }
 .footer__box {
   display: flex;
+  gap: 0;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
 }
 .footer__logo {
   color: #2196f3;
@@ -110,8 +113,10 @@ body {
 }
 .address__points {
   display: flex;
-  flex-direction: column;
   gap: 9px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 .address__locate {
   color: #fff;
@@ -142,15 +147,20 @@ body {
 .social__points {
   display: flex;
   gap: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .social__link {
   display: flex;
+  gap: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   width: 44px;
   height: 44px;
-  justify-content: center;
-  align-items: center;
   outline: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -165,7 +175,10 @@ body {
 
 .sending {
   display: flex;
+  gap: 0;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 .sending__title {
   color: #fff;
@@ -180,7 +193,12 @@ body {
 .sending__form {
   display: flex;
   gap: 12px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   position: relative;
+  top: 0;
+  left: 0;
 }
 .sending__input {
   width: 358px;
@@ -208,8 +226,8 @@ body {
   height: 24px;
   fill: #fff;
   position: absolute;
-  left: 528px;
   top: 13px;
+  left: 528px;
 }
 
 .header {
@@ -218,9 +236,12 @@ body {
 
 .page {
   display: flex;
+  gap: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   padding-top: 24px;
   padding-bottom: 25px;
-  align-items: center;
 }
 
 .logo {
@@ -239,10 +260,15 @@ body {
 .nav__points {
   display: flex;
   gap: 50px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav__point {
   position: relative;
+  top: 0;
+  left: 0;
 }
 
 .nav__link {
@@ -271,6 +297,10 @@ body {
 
 .contacts {
   display: flex;
+  gap: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   margin-left: 344px;
 }
 
@@ -279,7 +309,10 @@ body {
   fill: #757575;
   font-weight: 500;
   display: flex;
+  gap: 0;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts__link:hover, .contacts__link:focus {
@@ -299,7 +332,10 @@ body {
   font-weight: 500;
   margin-left: 30px;
   display: flex;
+  gap: 0;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts__numbers:hover, .contacts__numbers:focus {
@@ -335,8 +371,10 @@ body {
   background: #fff;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
   display: flex;
+  gap: 0;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-top: 40px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -345,6 +383,9 @@ body {
   top: 8px;
   left: 490px;
   display: flex;
+  gap: 0;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
   outline: none;
 }
@@ -385,14 +426,20 @@ body {
 }
 .modal__form {
   display: flex;
+  gap: 10px;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
 }
 .modal__label {
   display: flex;
+  gap: 0;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   position: relative;
+  top: 0;
+  left: 0;
 }
 .modal__label:hover > .modal__icon {
   fill: #2196f3;
@@ -454,7 +501,9 @@ body {
   margin-top: 10px;
   display: flex;
   gap: 7px;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 .modal__check {
   width: 16px;
@@ -501,8 +550,10 @@ body {
 }
 .filter__points {
   display: flex;
-  justify-content: center;
   gap: 8px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .filter__bt {
   color: #212121;
@@ -529,13 +580,21 @@ body {
 }
 .product__points {
   display: flex;
-  flex-wrap: wrap;
   gap: 30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .product__link {
   position: relative;
+  top: 0;
+  left: 0;
   display: flex;
+  gap: 0;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
   outline: none;
   max-width: 370px;
@@ -579,9 +638,9 @@ body {
   display: block;
   opacity: 0;
   position: absolute;
-  z-index: 0;
   top: 0;
   left: 0;
+  z-index: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate(0, 50%);
 }
@@ -598,11 +657,11 @@ body {
   background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4) 100%, red 0%), url(../images/backhero.jpg);
 }
 .hero__box {
-  display: flex;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  flex-direction: column;
+  padding: 200px 0;
   flex-wrap: wrap;
+  display: flex;
+  gap: 0;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -618,11 +677,12 @@ body {
 }
 .hero__bt {
   position: relative;
+  top: 0;
+  left: 0;
   margin-top: 40px;
   padding: 10px 32px;
 }
 .hero__bt::after {
-  position: absolute;
   content: "";
   width: 20px;
   height: 20px;
@@ -636,12 +696,14 @@ body {
 }
 
 .advantages {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 94px 0;
 }
 .advantages__points {
   display: flex;
   gap: 30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .advantages__point {
   flex-basis: calc((100% - 90px) / 4);
@@ -706,10 +768,15 @@ body {
 .activity__points {
   display: flex;
   gap: 30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .activity__point {
   flex-basis: calc((100% - 60px) / 3);
   position: relative;
+  top: 0;
+  left: 0;
 }
 .activity__point:nth-child(1) > .activity__text {
   padding: 27px 107px;
@@ -722,21 +789,24 @@ body {
 }
 .activity__text {
   position: absolute;
+  top: 224px;
+  left: 0;
   color: #fff;
   text-align: center;
   letter-spacing: 0.42px;
   text-transform: uppercase;
   background: rgba(47, 48, 58, 0.8);
-  top: 224px;
 }
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 94px 0;
   background-color: #f5f4fa;
 }
 .team__points {
   display: flex;
   gap: 30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .team__point {
   max-width: 270px;
@@ -773,8 +843,10 @@ body {
   height: 44px;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
+  gap: 0;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team__link:hover, .team__link:focus {
@@ -791,6 +863,8 @@ body {
 .team__list {
   display: flex;
   gap: 10px;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
   margin-top: 16px;
 }
@@ -802,12 +876,19 @@ body {
   margin: 0 auto;
 }
 .client__points {
+  margin-top: 50px;
   display: flex;
   gap: 30px;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
 }
 .client__link {
   display: flex;
+  gap: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   padding: 16px 32px;
   border-radius: 4px;
   border: 1px solid #afb1b8;

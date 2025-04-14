@@ -1,0 +1,18 @@
+@mixin flexbox($space: 0, $direction: row, $align: center, $justifying: center) {
+    display: flex;
+    gap: $space;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justifying;
+}
+
+@mixin position($place: absolute, $up: 0, $left: 0){
+    position: $place;
+    top: $up;
+    left: $left;
+}
+
+@mixin padding($top: 0, $bottom: 0){
+    padding-top: $top;
+    padding-bottom: $bottom;
+}

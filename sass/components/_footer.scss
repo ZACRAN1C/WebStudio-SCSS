@@ -1,9 +1,8 @@
 .footer {
   background-color: #2f303a;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
  &__box {
-    display: flex;
+  @include flexbox($align: flex-start);
   }
   
  &__logo {
@@ -25,9 +24,7 @@
   font-style: normal;
   margin-top: 20px;
   &__points {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
+    @include flexbox($space: 9px, $direction: column, $align: flex-start);
   }
   
   &__locate {
@@ -61,18 +58,15 @@
   }
   
   &__points {
-    display: flex;
-    gap: 10px;
+    @include flexbox($space: 10px);
   }
   
   &__link {
-    display: flex;
+    @include flexbox();
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     width: 44px;
     height: 44px;
-    justify-content: center;
-    align-items: center;
     outline: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
@@ -91,8 +85,7 @@
 
 
 .sending {
-  display: flex;
-  flex-direction: column;
+  @include flexbox($direction: column, $align: flex-start);
   &__title {
     color: #fff;
     font-size: 14px;
@@ -105,9 +98,8 @@
   }
   
   &__form {
-    display: flex;
-    gap: 12px;
-    position: relative;
+    @include flexbox($space: 12px);
+    @include position($place: relative);
   }
   
   &__input {
@@ -138,9 +130,7 @@
     width: 24px;
     height: 24px;
     fill: #fff;
-    position: absolute;
-    left: 528px;
-    top: 13px;
+    @include position($up: 13px, $left: 528px);
   }
 }
 
