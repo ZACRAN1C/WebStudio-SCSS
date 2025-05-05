@@ -114,10 +114,18 @@
   display: none;
   padding-bottom: 94px 0;
   @media screen and (min-width: 1200px) {
-    display: block;
+    display: flex;
   }
   &__title {
-    @extend %title;
+    color: #212121;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.08px;
+    margin-bottom: 50px;
   }
 
   &__points {
@@ -149,7 +157,8 @@
     background: rgba(47, 48, 58, 0.8);
   }
   &__img {
-    @extend %photo;
+    width: 370px;
+    height: 294px;
   }
 }
 

@@ -27,7 +27,7 @@ input {
   border: 0;
 }
 
-.client__title, .team__title, .activity__title {
+.client__title, .team__title {
   color: #212121;
   text-align: center;
   font-family: Roboto;
@@ -50,7 +50,7 @@ input {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.activity__img, .product__img {
+.product__img {
   width: 450px;
   height: 294px;
 }
@@ -1087,8 +1087,19 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .activity {
-    display: block;
+    display: flex;
   }
+}
+.activity__title {
+  color: #212121;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.08px;
+  margin-bottom: 50px;
 }
 .activity__points {
   display: flex;
@@ -1122,6 +1133,11 @@ body {
   text-transform: uppercase;
   background: rgba(47, 48, 58, 0.8);
 }
+.activity__img {
+  width: 370px;
+  height: 294px;
+}
+
 .team {
   padding: 60px 0;
   background-color: #f5f4fa;
