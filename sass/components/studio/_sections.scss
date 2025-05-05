@@ -7,27 +7,40 @@
     ),
     url(../images/backhero.jpg);
   &__box {
-    padding: 200px 0;
+    padding: 118px 0;
     flex-wrap: wrap;
     @include flexbox($direction: column);
+    @media screen and (min-width: 1200px) {
+      padding: 200px 0;
+    }
   }
 
   &__title {
     color: #fff;
     text-align: center;
-    font-size: 44px;
+    font-size: 26px;
     font-weight: 900;
-    line-height: 60px; /* 136.364% */
-    letter-spacing: 2.64px;
+    line-height: 42px; /* 136.364% */
+    letter-spacing: 1.56px;
     text-transform: uppercase;
-    max-width: 696px;
+    width: 360px;
+    @media screen and (min-width: 1200px) {
+      width: 696px;
+      font-size: 44px;
+      line-height: 60px; /* 136.364% */
+      letter-spacing: 2.64px;
+    }
   }
 
   &__bt {
     @include position($place: relative);
     @extend %button;
-    margin-top: 40px;
-    padding: 10px 32px;
+    margin-top: 30px;
+    padding: 10px 24px;
+    @media screen and (min-width: 1200px) {
+      margin-top: 40px;
+      padding: 10px 32px;
+    }
     &::after {
       content: "";
       width: 20px;
@@ -42,55 +55,41 @@
 }
 
 .advantages {
-  padding: 94px 0;
+  padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
   &__points {
-    @include flexbox($space: 30px);
+    @include flexbox($space: 30px, $direction: column);
+    @media screen and (min-width: 768px) {
+      @include flexbox($space: 30px);
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+      @include flexbox($space: 30px);
+    }
   }
 
   &__point {
     flex-basis: calc((100% - 90px) / 4);
-    &:first-child:before {
-      content: "";
-      display: block;
-      border-radius: 4px;
-      background-color: #f5f4fa;
-      width: 270px;
-      height: 120px;
-      background-image: url(../images/radio.jpg);
-      margin-bottom: 30px;
+    @include flexbox($direction: column);
+    @media screen and (min-width: 768px) {
+      @include flexbox($align: flex-start, $direction: column);
     }
-
-    &:nth-child(2):before {
-      content: "";
+    @media screen and (min-width: 1200px) {
       display: block;
-      border-radius: 4px;
-      background-color: #f5f4fa;
-      width: 270px;
-      height: 120px;
-      background-image: url(../images/clock.jpg);
-      margin-bottom: 30px;
     }
+  }
 
-    &:nth-child(3):before {
-      content: "";
-      display: block;
-      border-radius: 4px;
-      background-color: #f5f4fa;
-      width: 270px;
-      height: 120px;
-      background-image: url(../images/monitor.jpg);
-      margin-bottom: 30px;
+  &__img {
+    width: 450px;
+    height: 120px;
+    margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+      width: 354px;
     }
-
-    &:last-child:before {
-      content: "";
-      display: block;
-      border-radius: 4px;
-      background-color: #f5f4fa;
+    @media screen and (min-width: 1200px) {
       width: 270px;
-      height: 120px;
-      background-image: url(../images/astronaut.jpg);
-      margin-bottom: 30px;
     }
   }
 
@@ -107,11 +106,16 @@
     font-weight: 400;
     line-height: 24px; /* 171.429% */
     letter-spacing: 0.42px;
+    max-width: 450px;
   }
 }
 
 .activity {
-  padding-bottom: 94px;
+  display: none;
+  padding-bottom: 94px 0;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
   &__title {
     @extend %title;
   }
@@ -144,36 +148,71 @@
     text-transform: uppercase;
     background: rgba(47, 48, 58, 0.8);
   }
-  &__img{
-    @extend %photo
+  &__img {
+    @extend %photo;
   }
 }
 
 .team {
-  padding: 94px 0;
+  padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
   background-color: #f5f4fa;
   &__title {
     @extend %title;
+    @media screen and (min-width: 1200px) {
+      color: $title-color;
+      text-align: center;
+      font-size: 36px;
+      letter-spacing: 1.08px;
+      margin-bottom: 50px;
+    }
   }
 
   &__points {
-    @include flexbox($space: 30px);
+    @include flexbox($space: 30px, $direction: column);
+    @media screen and (min-width: 768px) {
+      @include flexbox($space: 30px);
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+      @include flexbox($space: 30px);
+    }
   }
 
   &__point {
-    max-width: 270px;
-    max-height: 428px;
+    width: 450px;
+    height: 622px;
     border-radius: 0px 0px 4px 4px;
     background-color: #fff;
-    padding-bottom: 30px;
+    padding-bottom: 36px;
     flex-basis: calc((100% - 90px) / 4);
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
       0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+    @media screen and (min-width: 768px) {
+      width: 354px;
+      height: 536px;
+      padding-bottom: 24px;
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 270px;
+      max-height: 428px;
+      padding-bottom: 30px;
+    }
   }
 
   &__img {
-    max-width: 270px;
-    max-height: 260px;
+    width: 450px;
+    height: 460px;
+    @media screen and (min-width: 768px) {
+      width: 354px;
+      height: 374px;
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 270px;
+      max-height: 260px;
+    }
   }
 
   &__name {
@@ -223,20 +262,48 @@
 }
 
 .client {
-  padding: 94px 0;
+  padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
   &__title {
     margin: 0 auto;
     @extend %title;
+    @media screen and (min-width: 1200px) {
+      color: #212121;
+      text-align: center;
+      font-family: Roboto;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 1.08px;
+    }
   }
 
   &__points {
-    margin-top: 50px;
+    margin-top: 30px;
     @include flexbox($space: 30px);
+    flex-wrap: wrap;
+    @media screen and (min-width: 1200px) {
+      margin-top: 50px;
+      @include flexbox($space: 30px);
+      flex-wrap: nowrap;
+    }
   }
 
   &__link {
+    width: 210px;
+    height: 92px;
+    @media screen and (min-width: 768px) {
+      width: 226px;
+      height: 92px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+      height: 92px;
+    }
     @include flexbox();
-    padding: 16px 32px;
     border-radius: 4px;
     border: 1px solid #afb1b8;
     outline: none;

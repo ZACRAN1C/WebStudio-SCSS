@@ -4,30 +4,63 @@
 
 .page {
   @include flexbox();
-  @include padding($top: 24px, $bottom: 25px);
+  @include padding($top: 16px, $bottom: 16px);
+  @media screen and (min-width: 768px) {
+    @include padding($top: 21px, $bottom: 21px);
+  }
+  @media screen and (min-width: 1200px) {
+    @include padding($top: 24px, $bottom: 25px);
+  }
 }
 
 .logo {
   color: $active-color;
   font-family: $logo-font;
-  font-size: 26px;
-  letter-spacing: 0.78px;
+  font-size: 24px;
+  letter-spacing: 0.72px;
   text-decoration: none;
-  margin-right: 93px;
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    color: $active-color;
+    font-family: $logo-font;
+    font-size: 24px;
+    letter-spacing: 0.78px;
+    text-decoration: none;
+    margin-right: 93px;
+  }
   &__studio {
     color: #000;
   }
 }
 
-.nav{
+.burger {
+  margin-left: 276px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.nav {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
   &__points {
     @include flexbox($space: 50px);
   }
-  
+
   &__point {
     @include position($place: relative);
   }
-  
+
   &__link {
     color: $title-color;
     font-weight: 500;
@@ -52,11 +85,16 @@
   }
 }
 
-
-
 .contacts {
-  @include flexbox();
-  margin-left: 344px;
+  display: none;
+  @media screen and (min-width: 768px) {
+    @include flexbox($direction: column, $align: flex-start);
+    margin-left: 96px;
+  }
+  @media screen and (min-width: 1200px) {
+    @include flexbox();
+    margin-left: 344px;
+  }
   &__link {
     color: $text-color;
     fill: $text-color;
@@ -70,19 +108,26 @@
       fill: $active-color;
     }
   }
-  
+
   &__email {
-    width: 16px;
-    height: 12px;
-    margin-right: 10px;
+    width: 14px;
+    height: 10px;
+    margin-right: 8px;
+    @media screen and (min-width: 1200px) {
+      width: 16px;
+      height: 12px;
+      margin-right: 10px;
+    }
   }
-  
+
   &__numbers {
     color: $text-color;
     fill: $text-color;
     font-weight: 500;
-    margin-left: 30px;
     @include flexbox();
+    @media screen and (min-width: 1200px) {
+      margin-left: 30px;
+    }
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
@@ -91,12 +136,15 @@
       fill: $active-color;
     }
   }
-  
+
   &__tel {
     width: 10px;
-    height: 16px;
-    margin-right: 10px;
+    height: 14px;
+    margin-right: 8px;
+    @media screen and (min-width: 1200px) {
+      width: 10px;
+      height: 16px;
+      margin-right: 10px;
+    }
   }
 }
-
-

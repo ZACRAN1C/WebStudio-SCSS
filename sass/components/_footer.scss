@@ -1,8 +1,23 @@
 .footer {
   background-color: #2f303a;
   padding: 60px 0;
+  &__container{
+    @media screen and (min-width: 768px) {
+      @include flexbox($align: flex-start);
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+      @include flexbox($align: flex-start);
+    }
+  }
  &__box {
-  @include flexbox($align: flex-start);
+  @include flexbox($direction: column);
+  @media screen and (min-width: 768px) {
+    @include flexbox( $direction: column);
+  }
+  @media screen and (min-width: 1200px) {
+    @include flexbox($align: flex-start, $direction: column); 
+  }
   }
   
  &__logo {
@@ -24,7 +39,13 @@
   font-style: normal;
   margin-top: 20px;
   &__points {
-    @include flexbox($space: 9px, $direction: column, $align: flex-start);
+    @include flexbox($space: 8px, $direction: column  );
+    @media screen and (min-width: 768px) {
+      @include flexbox($space: 8px, $direction: column);
+    }
+    @media screen and (min-width: 1200px) {
+      @include flexbox($space: 9px, $direction: column, $align: flex-start);
+    }
   }
   
   &__locate {
@@ -45,8 +66,18 @@
 
 
 .social {
-  margin-left: 70px;
-  margin-right: 93px;
+  margin-top: 60px;
+  @include flexbox($direction: column);
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    margin-left: 165px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+    margin-left: 70px;
+    margin-right: 93px;
+    @include flexbox($direction: column, $align: flex-start);
+  }
   &__title {
     color: #fff;
     font-size: 14px;
@@ -85,7 +116,12 @@
 
 
 .sending {
-  @include flexbox($direction: column, $align: flex-start);
+  margin-top: 60px;
+  @include flexbox($direction: column);
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+    @include flexbox($direction: column, $align: flex-start);
+  }
   &__title {
     color: #fff;
     font-size: 14px;
@@ -98,8 +134,11 @@
   }
   
   &__form {
-    @include flexbox($space: 12px);
+    @include flexbox($space: 20px, $direction: column);
     @include position($place: relative);
+    @media screen and (min-width: 1200px) {
+      @include flexbox($space: 12px);
+    }
   }
   
   &__input {
@@ -130,7 +169,10 @@
     width: 24px;
     height: 24px;
     fill: #fff;
-    @include position($up: 13px, $left: 528px);
+    @include position($up: 83px, $left: 240px);
+    @media screen and (min-width: 1200px) {
+      @include position($up: 13px, $left: 528px);
+    }
   }
 }
 

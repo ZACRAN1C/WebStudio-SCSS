@@ -16,7 +16,7 @@
   background: #fff;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
-    @include flexbox($direction: column);
+  @include flexbox($direction: column);
   padding-top: 40px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &__close {
@@ -30,7 +30,7 @@
       fill: $active-color;
     }
   }
-  
+
   &__cross {
     width: 18px;
     height: 18px;
@@ -39,7 +39,7 @@
     z-index: 2;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   &__ellipse {
     width: 30px;
     height: 30px;
@@ -49,7 +49,7 @@
     @include position();
     z-index: 1;
   }
-  
+
   &__title {
     color: $title-color;
     text-align: center;
@@ -57,12 +57,16 @@
     line-height: normal;
     letter-spacing: 0.6px;
     margin-bottom: 12px;
+    width: 370px;
+    @media screen and (min-width: 1200px) {
+      width: 448px;
+    }
   }
-  
+
   &__form {
     @include flexbox($space: 10px, $direction: column);
   }
-  
+
   &__label {
     @include flexbox($direction: column, $align: flex-start);
     @include position($place: relative);
@@ -73,7 +77,7 @@
       border: 1px solid $active-color;
     }
   }
-  
+
   &__sp {
     color: $text-color;
     font-size: 12px;
@@ -82,7 +86,7 @@
     letter-spacing: 0.12px;
     margin-bottom: 4px;
   }
-  
+
   &__input {
     width: 406px;
     height: 40px;
@@ -97,7 +101,7 @@
       border: 1px solid $active-color;
     }
   }
-  
+
   &__icon {
     width: 18px;
     height: 18px;
@@ -105,7 +109,7 @@
     @include position($up: 30px, $left: 12px);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   &__area {
     width: 432px;
     color: rgba(117, 117, 117, 0.5);
@@ -121,32 +125,30 @@
     &:hover {
       border: 1px solid $active-color;
     }
-    
+
     &:focus-visible {
       border: 1px solid $active-color;
     }
   }
-  
-  
-  
+
   &__conditions {
     margin-top: 10px;
     @include flexbox($space: 7px);
   }
-  
+
   &__check {
     width: 16px;
     height: 15px;
     fill: $title-color;
   }
-  
+
   &__mailing {
     color: $text-color;
     font-weight: 400;
     line-height: 24px; /* 171.429% */
     letter-spacing: 0.42px;
   }
-  
+
   &__link {
     color: $active-color;
     font-weight: 400;
@@ -159,7 +161,7 @@
     text-underline-offset: auto;
     text-underline-position: from-font;
   }
-  
+
   &__sub {
     @extend %button;
     width: 200px;
@@ -169,8 +171,6 @@
   }
 }
 
-
-
 .is-hidden {
   pointer-events: none;
   opacity: 0;
@@ -178,5 +178,3 @@
     transform: translate(-50%, -50%) scale(0);
   }
 }
-
-
