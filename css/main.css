@@ -85,7 +85,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 480px;
+  max-width: 320px;
   padding: 0 15px;
   margin: 0 auto;
   outline: solid red;
