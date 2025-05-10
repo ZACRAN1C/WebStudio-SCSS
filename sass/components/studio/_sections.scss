@@ -23,9 +23,10 @@
     line-height: 42px; /* 136.364% */
     letter-spacing: 1.56px;
     text-transform: uppercase;
-    width: 360px;
+    max-width: 360px;
+    width: 100%;
     @media screen and (min-width: 1200px) {
-      width: 696px;
+      max-width: 696px;
       font-size: 44px;
       line-height: 60px; /* 136.364% */
       letter-spacing: 2.64px;
@@ -75,21 +76,24 @@
     @include flexbox($direction: column);
     @media screen and (min-width: 768px) {
       @include flexbox($align: flex-start, $direction: column);
+      flex-basis: calc((100% - 90px) / 2);
     }
     @media screen and (min-width: 1200px) {
       display: block;
+      flex-basis: calc((100% - 90px) / 4);
     }
   }
 
   &__img {
-    width: 450px;
-    height: 120px;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
     margin-bottom: 30px;
     @media screen and (min-width: 768px) {
-      width: 354px;
+      max-width: 354px;
     }
     @media screen and (min-width: 1200px) {
-      width: 270px;
+      max-width: 270px;
     }
   }
 
@@ -112,9 +116,9 @@
 
 .activity {
   display: none;
-  padding-bottom: 94px 0;
+  padding: 94px 0;
   @media screen and (min-width: 1200px) {
-    display: flex;
+    display: block;
   }
   &__title {
     color: #212121;
@@ -136,17 +140,6 @@
     flex-basis: calc((100% - 60px) / 3);
     @include position($place: relative);
   }
-  &__point:nth-child(1) > &__text {
-    padding: 27px 107px;
-  }
-
-  &__point:nth-child(2) > &__text {
-    padding: 27px 113px;
-  }
-
-  &__point:nth-child(3) > &__text {
-    padding: 27px 95px;
-  }
 
   &__text {
     @include position($up: 224px);
@@ -155,10 +148,15 @@
     letter-spacing: 0.42px;
     text-transform: uppercase;
     background: rgba(47, 48, 58, 0.8);
+    max-width: 370px;
+    height: 16px;
+    width: 100%;
+    padding: 27px 0;
   }
   &__img {
-    width: 370px;
-    height: 294px;
+    max-width: 370px;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -191,8 +189,9 @@
   }
 
   &__point {
-    width: 450px;
-    height: 622px;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
     border-radius: 0px 0px 4px 4px;
     background-color: #fff;
     padding-bottom: 36px;
@@ -200,9 +199,10 @@
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
       0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
     @media screen and (min-width: 768px) {
-      width: 354px;
-      height: 536px;
+      max-width: 354px;
+      max-height: 536px;
       padding-bottom: 24px;
+      flex-basis: calc((100% - 30px) / 2);
     }
     @media screen and (min-width: 1200px) {
       max-width: 270px;
@@ -212,11 +212,12 @@
   }
 
   &__img {
-    width: 450px;
-    height: 460px;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
     @media screen and (min-width: 768px) {
-      width: 354px;
-      height: 374px;
+      max-width: 354px;
+      max-height: 374px;
     }
     @media screen and (min-width: 1200px) {
       max-width: 270px;

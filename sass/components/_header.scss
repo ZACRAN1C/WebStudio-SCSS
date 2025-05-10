@@ -36,7 +36,7 @@
 }
 
 .burger {
-  margin-left: 276px;
+  margin-left: auto;
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -88,11 +88,11 @@
 .contacts {
   display: none;
   @media screen and (min-width: 768px) {
-    @include flexbox($direction: column, $align: flex-start);
+    @include flexbox($direction: column, $align: flex-start, $space: 10px);
     margin-left: 96px;
   }
   @media screen and (min-width: 1200px) {
-    @include flexbox();
+    @include flexbox($space: 0);
     margin-left: 344px;
   }
   &__link {
@@ -146,5 +146,9 @@
       height: 16px;
       margin-right: 10px;
     }
+  }
+
+  &__text{
+    text-wrap: nowrap;
   }
 }
