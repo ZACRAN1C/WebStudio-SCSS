@@ -10,7 +10,7 @@
 .modal {
   @include position($up: 50%, $left: 50%);
   transform: translate(-50%, -50%) scale(1);
-  width: 528px;
+  width: 300px;
   height: 581px;
   border-radius: 4px;
   background: #fff;
@@ -19,8 +19,21 @@
   @include flexbox($direction: column);
   padding-top: 40px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 581px;
+    }
+   @media screen and (min-width: 768px) {
+  width: 528px;
+  height: 581px;
+    }
+    @media screen and (min-width: 1200px) {
+  width: 528px;
+  height: 581px;
+    }
   &__close {
-    @include position($up: 8px, $left: 490px);
+    @include position($up: 8px, $left: none);
+    right: 30px;
     @include flexbox();
     outline: none;
     &:hover > .modal__cross {
@@ -88,12 +101,24 @@
   }
 
   &__input {
-    width: 406px;
+    width: 238px;
     height: 40px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     padding-left: 42px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: 480px) {
+    width: 370px;
+    height: 40px;
+    }
+    @media screen and (min-width: 768px) {
+    width: 406px;
+    height: 40px;
+    }
+    @media screen and (min-width: 1200px) {
+    width: 406px;
+    height: 40px;
+    }
     &:focus ~ &__icon {
       fill: $active-color;
     }
@@ -111,7 +136,7 @@
   }
 
   &__area {
-    width: 432px;
+    width: 256px;
     color: rgba(117, 117, 117, 0.5);
     font-size: 12px;
     font-weight: 400;
@@ -122,6 +147,15 @@
     padding: 16px 12px;
     padding-bottom: 96px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: 480px) {
+    width: 386px;
+    }
+    @media screen and (min-width: 768px) {
+  width: 432px;
+    }
+    @media screen and (min-width: 1200px) {
+  width: 432px;
+    }
     &:hover {
       border: 1px solid $active-color;
     }
