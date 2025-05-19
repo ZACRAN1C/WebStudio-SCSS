@@ -220,7 +220,7 @@
     @include flexbox(
       $direction: column,
       $align: flex-start,
-      $justifying: flex-start
+      $justifying: space-between
     );
   }
   &__close {
@@ -232,7 +232,6 @@
   }
   &__points {
     @include flexbox($direction: column, $space: 32px, $align: flex-start);
-    margin-bottom: 160px;
   }
   &__page {
     color: #212121;
