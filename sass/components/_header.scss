@@ -20,7 +20,7 @@
   letter-spacing: 0.72px;
   text-decoration: none;
   @media screen and (min-width: 768px) {
-    margin-right: 88px;
+    margin-right: auto;
   }
   @media screen and (min-width: 1200px) {
     color: $active-color;
@@ -28,7 +28,6 @@
     font-size: 24px;
     letter-spacing: 0.78px;
     text-decoration: none;
-    margin-right: 93px;
   }
   &__studio {
     color: #000;
@@ -87,13 +86,12 @@
 
 .contacts {
   display: none;
+  margin-left: auto;
   @media screen and (min-width: 768px) {
     @include flexbox($direction: column, $align: flex-start, $space: 10px);
-    margin-left: 96px;
   }
   @media screen and (min-width: 1200px) {
     @include flexbox($space: 0);
-    margin-left: 344px;
   }
   &__link {
     color: $text-color;

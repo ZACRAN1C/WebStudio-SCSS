@@ -1,45 +1,45 @@
 .footer {
   background-color: #2f303a;
   padding: 60px 0;
-  &__container{
+  &__container {
     @media screen and (min-width: 768px) {
       @include flexbox($align: flex-start);
       flex-wrap: wrap;
     }
     @media screen and (min-width: 1200px) {
-      @include flexbox($align: flex-start);
+      @include flexbox($align: flex-start, $justifying: normal);
     }
   }
- &__box {
-  @include flexbox($direction: column);
-  @media screen and (min-width: 768px) {
-    @include flexbox( $direction: column);
+  &__box {
+    @include flexbox($direction: column);
+    @media screen and (min-width: 768px) {
+      @include flexbox($direction: column);
+      margin-right: 165px;
+    }
+    @media screen and (min-width: 1200px) {
+      @include flexbox($align: flex-start, $direction: column);
+      margin-right: 0;
+    }
   }
-  @media screen and (min-width: 1200px) {
-    @include flexbox($align: flex-start, $direction: column); 
-  }
-  }
-  
- &__logo {
+
+  &__logo {
     color: $active-color;
     font-family: $logo-font;
     font-size: 26px;
     letter-spacing: 0.78px;
     text-decoration: none;
   }
-  
- &__studio {
+
+  &__studio {
     color: #fff;
   }
 }
-
-
 
 .address {
   font-style: normal;
   margin-top: 20px;
   &__points {
-    @include flexbox($space: 8px, $direction: column  );
+    @include flexbox($space: 8px, $direction: column);
     @media screen and (min-width: 768px) {
       @include flexbox($space: 8px, $direction: column);
     }
@@ -47,14 +47,14 @@
       @include flexbox($space: 9px, $direction: column, $align: flex-start);
     }
   }
-  
+
   &__locate {
     color: #fff;
     font-weight: 400;
     line-height: 24px; /* 171.429% */
     letter-spacing: 0.42px;
   }
-  
+
   &__link {
     color: rgba(255, 255, 255, 0.6);
     font-weight: 400;
@@ -63,20 +63,16 @@
   }
 }
 
-
-
 .social {
   margin-top: 60px;
   @include flexbox($direction: column);
   @media screen and (min-width: 768px) {
     margin-top: 0;
-    margin-left: 165px;
   }
   @media screen and (min-width: 1200px) {
-    margin-top: 0;
-    margin-left: 70px;
-    margin-right: 93px;
     @include flexbox($direction: column, $align: flex-start);
+    margin-left: 83px;
+    margin-right: 93px;
   }
   &__title {
     color: #fff;
@@ -87,11 +83,11 @@
     text-transform: uppercase;
     margin-bottom: 20px;
   }
-  
+
   &__points {
     @include flexbox($space: 10px);
   }
-  
+
   &__link {
     @include flexbox();
     background-color: rgba(255, 255, 255, 0.1);
@@ -105,7 +101,7 @@
       background-color: $active-color;
     }
   }
-  
+
   &__icon {
     width: 20px;
     height: 20px;
@@ -113,13 +109,16 @@
   }
 }
 
-
-
 .sending {
+  max-width: 450px;
   margin-top: 60px;
   @include flexbox($direction: column);
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
   @media screen and (min-width: 1200px) {
     margin-top: 0;
+    max-width: 570px;
     @include flexbox($direction: column, $align: flex-start);
   }
   &__title {
@@ -132,18 +131,19 @@
     text-transform: uppercase;
     margin-bottom: 20px;
   }
-  
+
   &__form {
+    width: 100%;
     @include flexbox($space: 20px, $direction: column);
     @include position($place: relative);
     @media screen and (min-width: 1200px) {
       @include flexbox($space: 12px, $justifying: flex-start);
+      max-width: 570px;
     }
   }
-  
+
   &__input {
     width: 100%;
-    max-width: 450px;
     height: 46px;
     flex-shrink: 0;
     color: rgba(255, 255, 255, 0.6);
@@ -157,28 +157,26 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     padding-left: 16px;
     @media screen and (min-width: 1200px) {
-      max-width: 270px;
+      max-width: 358px;
     }
   }
-  
+
   &__sub {
+    position: relative;
     max-width: 200px;
-    width: 100%;
     height: 50px;
     flex-shrink: 0;
     @extend %button;
     padding: 10px 62px 10px 28px;
   }
-  
+
   &__icon {
     width: 24px;
     height: 24px;
     fill: #fff;
-    @include position($up: 83px, $left: 150px);
+    @include position($up: 13px, $left: 150px);
     @media screen and (min-width: 1200px) {
-      @include position($up: 13px, $left: 448px);
+      @include position($up: 13px, $left: 148px);
     }
   }
 }
-
-

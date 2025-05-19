@@ -61,18 +61,19 @@
     padding: 94px 0;
   }
   &__points {
-    @include flexbox($space: 30px, $direction: column);
+    @include flexbox($space: 30px, $direction: column, $align: normal);
     @media screen and (min-width: 768px) {
-      @include flexbox($space: 30px);
+      @include flexbox($space: 30px, $align: normal);
       flex-wrap: wrap;
     }
     @media screen and (min-width: 1200px) {
-      @include flexbox($space: 30px);
+      @include flexbox($space: 30px, $align: normal);
     }
   }
 
   &__point {
     flex-basis: calc((100% - 90px) / 4);
+    max-width: 450px;
     @include flexbox($direction: column);
     @media screen and (min-width: 768px) {
       @include flexbox($align: flex-start, $direction: column);
@@ -86,15 +87,8 @@
 
   &__img {
     width: 100%;
-    max-width: 450px;
     height: auto;
     margin-bottom: 30px;
-    @media screen and (min-width: 768px) {
-      max-width: 354px;
-    }
-    @media screen and (min-width: 1200px) {
-      max-width: 270px;
-    }
   }
 
   &__title {
@@ -139,6 +133,7 @@
   &__point {
     flex-basis: calc((100% - 60px) / 3);
     @include position($place: relative);
+    max-width: 370px;
   }
 
   &__text {
@@ -148,13 +143,11 @@
     letter-spacing: 0.42px;
     text-transform: uppercase;
     background: rgba(47, 48, 58, 0.8);
-    max-width: 370px;
     height: 16px;
     width: 100%;
     padding: 27px 0;
   }
   &__img {
-    max-width: 370px;
     width: 100%;
     height: auto;
   }
@@ -189,7 +182,6 @@
   }
 
   &__point {
-    width: 100%;
     max-width: 450px;
     height: auto;
     border-radius: 0px 0px 4px 4px;
@@ -199,29 +191,21 @@
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
       0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
     @media screen and (min-width: 768px) {
-      max-width: 354px;
-      max-height: 536px;
       padding-bottom: 24px;
       flex-basis: calc((100% - 30px) / 2);
     }
     @media screen and (min-width: 1200px) {
-      max-width: 270px;
-      max-height: 428px;
       padding-bottom: 30px;
+      flex-basis: calc((100% - 90px) / 4);
     }
   }
 
   &__img {
     width: 100%;
-    max-width: 450px;
     height: auto;
     @media screen and (min-width: 768px) {
-      max-width: 354px;
-      max-height: 374px;
     }
     @media screen and (min-width: 1200px) {
-      max-width: 270px;
-      max-height: 260px;
     }
   }
 
@@ -302,16 +286,23 @@
     }
   }
 
-  &__link {
-    width: 210px;
-    height: 92px;
-    @media screen and (min-width: 768px) {
-      width: 226px;
-      height: 92px;
+  &__point{
+    max-width: 226px;
+    width: 100%;
+    flex-basis: calc((100% - 30px) / 2);
+     @media screen and (min-width: 768px) {
+flex-basis: calc((100% - 60px) / 3);
     }
     @media screen and (min-width: 1200px) {
-      width: 170px;
-      height: 92px;
+flex-basis: calc((100% - 150px) / 1);
+    }
+  }
+
+  &__link {
+    height: 92px;
+    @media screen and (min-width: 768px) {
+    }
+    @media screen and (min-width: 1200px) {
     }
     @include flexbox();
     border-radius: 4px;
