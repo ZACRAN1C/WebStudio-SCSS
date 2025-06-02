@@ -232,6 +232,7 @@
   }
   &__points {
     @include flexbox($direction: column, $space: 32px, $align: flex-start);
+    margin-bottom: 60px;
   }
   &__page {
     color: #212121;
