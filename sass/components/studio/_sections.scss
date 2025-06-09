@@ -1,5 +1,7 @@
 .hero {
   background-color: #2f303a;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-image: linear-gradient(
       to bottom,
       rgba(47, 48, 58, 0.4) 100%,
@@ -9,22 +11,47 @@
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../images/mobile-web/background@mobile-2x.webp);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(47, 48, 58, 0.4) 100%,
+        red 0%
+      ),
+      url(../images/mobile-web/background@mobile-2x.webp);
   }
   @media screen and (min-width: 768px) {
-    background-image: url(../images/tablet/background@tablet-1x.webp);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(47, 48, 58, 0.4) 100%,
+        red 0%
+      ),
+      url(../images/tablet/background@tablet-1x.webp);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/tablet/background@tablet-2x.webp);
+      background-image: linear-gradient(
+          to bottom,
+          rgba(47, 48, 58, 0.4) 100%,
+          red 0%
+        ),
+        url(../images/tablet/background@tablet-2x.webp);
     }
   }
   @media screen and (min-width: 1200px) {
-    background-image: url(../images/desktop-web/background@desktop-1x.webp);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(47, 48, 58, 0.4) 100%,
+        red 0%
+      ),
+      url(../images/desktop-web/background@desktop-1x.webp);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/desktop-web/background@desktop-2x.webp);
+      background-image: linear-gradient(
+          to bottom,
+          rgba(47, 48, 58, 0.4) 100%,
+          red 0%
+        ),
+        url(../images/desktop-web/background@desktop-2x.webp);
     }
   }
   &__box {
